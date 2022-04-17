@@ -7,7 +7,7 @@ This app features:
 # Skills used
 - **JavaScript** objects and object constructors
 # Lessons learned
--
+- using modal
 # Future plans
 - [ ] update Readme
 - [ ] save data on Firebase & enable user authentication
