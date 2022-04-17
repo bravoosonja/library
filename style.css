@@ -1,8 +1,8 @@
 :root {
-  --light-gray: #bdc5c1;
+  --light-gray: #dcdcdd;
   --dark-gray: #474747;
-  --dark-green: #52b788;
-  --green: #b3ffb3;
+  --green: #52b788;
+  --dark-green: #40916c;
   --light-green: #d1ffd7;
   --card-box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
@@ -99,18 +99,21 @@ body {
   padding: var(--layout-padding);
 }
 
-#your-books-h2 {
+#your-books-h2,
+#add-book-h2 {
   font-weight: 600;
   font-size: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
-.book-card {
+.book-card,
+.add-book-container {
   background-color: white;
   box-shadow: var(--card-box-shadow);
   padding: 0.7rem;
@@ -119,12 +122,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 #book-title {
   font-weight: 600;
-  color: var(--dark-green);
+  color: var(--green);
 }
 
 #delete-btn {
@@ -167,4 +170,61 @@ body {
 
 #delete-btn:focus {
   outline: 1px transparent;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 60vh;
+  border-radius: 7px;
+  background-color: var(--light-gray);
+  text-align: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#close-btn {
+  background-color: whitesmoke;
+  border-radius: 8px;
+  border-width: 0;
+  color: var(--dark-gray);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.add-book-container {
+  color: var(--green);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  font-weight: 600;
 }
