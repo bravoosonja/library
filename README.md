@@ -1,5 +1,5 @@
 # Introduction
-Small library app to keep track of information of your books in the local storage.
+Small library app to keep track of your books.
 
 [👉Live Demo](https://bravoosonja.github.io/library/)
 
