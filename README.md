@@ -1,15 +1,9 @@
 # Introduction
 Small library app to keep track of your books.
 
-<<<<<<< HEAD
-[👉Live Demo]()
-
-![Demo](./demo/demo.gif)
-=======
 [👉Live Demo](https://bravoosonja.github.io/library/)
 
 ![Demo](/demo/demo.gif)
->>>>>>> 518663e037ea1f03fe0dd7b88e389b48651bd811
 
 This app features: 
 - add or delete book
@@ -22,7 +16,7 @@ This app features:
 - **CSS**
 # Lessons learned
 - using modal
-- DOM input checkbox
+- DOM manipulationo for input checkbox
 - Creating book card did not function as expected at first. This was caused due to using wrong ID name for DOM manipulation 
 - Delete and Remove buttons on each book card did not function as expected. Resolved by adding event listeners inside ```CreateBookCard```
 # Future plans
