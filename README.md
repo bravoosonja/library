@@ -13,8 +13,8 @@ This app features:
 - using modal
 - DOM input checkbox
 # Future plans
-- [ ] refactor code
-- [ ] update Readme
+- [x] refactor code
+- [x] update Readme
 - [ ] handle keyboard input to close modal
 - [ ] display library status of numbers of books read, not read, and a total number of books
 - [ ] save data on Firebase & enable user authentication
