@@ -4,7 +4,6 @@ Small library app to keep track of information of your books in the local storag
 [👉Live Demo](https://bravoosonja.github.io/library/)
 
 ![Demo](/demo/demo.gif)
-![demo](/demo/demo.jpg)
 
 This app features: 
 - add or delete book
