@@ -21,6 +21,32 @@ class Book {
   }
 }
 
+//local storage
+function saveBookToLocalStorage() {
+  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+}
+
+function getBooksFromLocalStorage() {
+  if (myLibrary === null) {
+    myLibrary = [];
+  } else {
+    const booksFromStorage = JSON.parse(localStorage.getItem("books"));
+    myLibrary = booksFromStorage;
+    populateLibrary();
+  }
+}
+
+// modal
+function openModal() {
+  modal.classList.add("active");
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+  form.reset();
+}
+
+//main functions
 let myLibrary = [];
 
 function addBookToLibrary() {
@@ -103,28 +129,3 @@ const addBook = () => {
   saveBookToLocalStorage();
   updateBooks();
 };
-
-//local storage
-function saveBookToLocalStorage() {
-  localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-}
-
-function getBooksFromLocalStorage() {
-  if (myLibrary === null) {
-    myLibrary = [];
-  } else {
-    const booksFromStorage = JSON.parse(localStorage.getItem("books"));
-    myLibrary = booksFromStorage;
-    populateLibrary();
-  }
-}
-
-// modal
-function openModal() {
-  modal.classList.add("active");
-}
-
-function closeModal() {
-  modal.classList.remove("active");
-  form.reset();
-}
