@@ -1,7 +1,8 @@
 # Introduction
 Small library app to keep track of information of your books in the local storage.
 [👉Live Demo]()
-![Demo]()
+![Demo](./demo/demo.gif)
+![Demoimg](./demo/demo.jpg)
 This app features: 
 - add or delete book
 - keeps track of the book title, author, pages, whether or not you have read it yet
@@ -14,7 +15,7 @@ This app features:
 - DOM input checkbox
 # Future plans
 - [x] refactor code
-- [x] update Readme
+- [ ] update Readme
 - [ ] handle keyboard input to close modal
 - [ ] display library status of numbers of books read, not read, and a total number of books
 - [ ] save data on Firebase & enable user authentication
