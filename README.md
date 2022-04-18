@@ -16,7 +16,7 @@ This app features:
 - **CSS**
 # Lessons learned
 - using modal
-- DOM manipulationo for input checkbox
+- DOM manipulation for input checkbox
 - Creating book card did not function as expected at first. This was caused due to using wrong ID name for DOM manipulation 
 - Delete and Remove buttons on each book card did not function as expected. Resolved by adding event listeners inside ```CreateBookCard```
 # Future plans
