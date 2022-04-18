@@ -1,7 +1,7 @@
 # Introduction
 Small library app to keep track of information of your books in the local storage.
-[👉Live Demo]()
-![Demo]()
+[👉Live Demo](https://bravoosonja.github.io/library/)
+![Demo](/demo/demo.gif)
 This app features: 
 - add or delete book
 - keeps track of the book title, author, pages, whether or not you have read it yet
