@@ -67,11 +67,11 @@ const createBookCard = (newBook) => {
 
   if (newBook.isRead === true) {
     readBtn.textContent = "Read";
-    readBtn.style.backgroundColor = "#c7f9cc";
+    readBtn.style.backgroundColor = "#affc41";
     readBtn.style.color = "ffffff";
   } else if (newBook.isRead === false) {
     readBtn.textContent = "Not read";
-    readBtn.style.backgroundColor = "#f7b267";
+    readBtn.style.backgroundColor = "#eefc57";
     readBtn.style.color = "ffffff";
   }
 

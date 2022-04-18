@@ -5,7 +5,6 @@ This app features:
 - add or delete book
 - keeps track of the book title, author, pages, whether or not you have read it yet
 - toggle whether or not you have read the book
-- save, extract, modify book information from the local storage
 # Skills used
 - **JavaScript** objects and object constructors
 - **JavaScript** ```JSON.stringify``` and ```JSON.parse```
