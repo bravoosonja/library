@@ -3,14 +3,11 @@ const form = document.querySelector("#add-book-form");
 const modal = document.getElementById("modal");
 const newBtn = document.getElementById("new-book-btn");
 const closeBtn = document.getElementById("close-btn");
-const deleteBtn = document.getElementById("delete-btn");
-const readBtn = document.createElement("button");
 const addBtn = document.getElementById("add-book-btn");
 
 //event listeners
 newBtn.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
-readBtn.addEventListener("click", updateRead);
 addBtn.addEventListener("click", addBookToLibrary);
 window.addEventListener("onload", populateLibrary);
 
@@ -47,14 +44,6 @@ function populateLibrary() {
   }
 }
 
-// const populateLibrary = () => {
-//   const booksGrid = document.getElementById("books-grid");
-//
-//   for (let book of myLibrary.books) {
-//     createBookCard(book);
-//   }
-// };
-
 const createBookCard = (newBook) => {
   const booksGrid = document.getElementById("books-grid");
   const bookCard = document.createElement("div");
@@ -87,7 +76,14 @@ const createBookCard = (newBook) => {
   }
 
   deleteBtn.addEventListener("click", () => {
-    myLibrary.splice(myLibrary.indexOf(item), 1);
+    myLibrary.splice(myLibrary.indexOf(newBook), 1);
+    saveBookToLocalStorage();
+    populateLibrary();
+  });
+
+  //toggle Read
+  readBtn.addEventListener("click", () => {
+    newBook.isRead = !newBook.isRead;
     saveBookToLocalStorage();
     populateLibrary();
   });
@@ -102,36 +98,11 @@ const createBookCard = (newBook) => {
 };
 
 const addBook = () => {
-  // e.preventDefault();
   const newBook = getBookFromInput();
   myLibrary.addBook(newBook);
   saveBookToLocalStorage();
   updateBooks();
 };
-
-function updateRead() {
-  readBtn.addEventListener("click", () => {
-    if (isRead.value === false) {
-      readBtn.innerHTML = "Not read";
-      readBtn.style.backgroundColor = "#f77f00";
-      readBtn.style.color = "ffffff";
-      localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-    } else {
-      readBtn.innerHTML = "Read";
-      readBtn.style.backgroundColor = "#0cce6b";
-      readBtn.style.color = "ffffff";
-      localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-    }
-    saveBookToLocalStorage();
-    populateLibrary();
-  });
-}
-
-// function deleteBook() {
-//   bookGrid.removeChild(bookCard);
-//   myLibrary.splice(bookCard, 1);
-//   localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
-// }
 
 //local storage
 function saveBookToLocalStorage() {
