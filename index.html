@@ -30,19 +30,7 @@
       </header>
       <main class="books-container">
         <h2 id="your-books-h2">Your Books</h2>
-        <div class="books-grid">
-          <div class="book-card">
-            <p class="book-title">The Hobbit</p>
-            <p>J.R.R. Tolkin</p>
-            <p>295</p>
-            <p>Not read yet</p>
-            <div class="btns-container">
-              <button id="delete-btn" class="normal-btn">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </div>
-          </div>
-        </div>
+        <div class="books-grid" id="books-grid"></div>
       </main>
       <div class="modal" id="modal">
         <div class="modal-content">
@@ -61,7 +49,7 @@
             </form>
           </div>
           <div class="submit-btn-container">
-            <button id="add-book-btn">Add Book</button>
+            <button id="add-book-btn" type="submit">Add Book</button>
           </div>
         </div>
       </div>
